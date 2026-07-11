@@ -612,10 +612,13 @@
         align-items: center;
         gap: 1.5rem;
         padding: 1.05rem 0.2rem;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 0;
         transition: border-color 0.25s ease;
       }
-      .frow:focus-within {
+      .frow:has(#f-notes) {
+        border-bottom: 1px solid var(--line);
+      }
+      .frow:has(#f-notes):focus-within {
         border-bottom-color: var(--accent);
       }
       /* first row aligns its content to the top, level with the heading column */
